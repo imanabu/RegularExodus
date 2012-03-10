@@ -43,6 +43,8 @@
             this.textBoxReplaceText = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.buttonReplace = new System.Windows.Forms.Button();
+            this.StatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -93,6 +95,8 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StatusLabel});
             this.statusStrip1.Location = new System.Drawing.Point(0, 492);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(945, 22);
@@ -180,6 +184,11 @@
             this.buttonReplace.UseVisualStyleBackColor = true;
             this.buttonReplace.Click += new System.EventHandler(this.buttonReplace_Click);
             // 
+            // StatusLabel
+            // 
+            this.StatusLabel.Name = "StatusLabel";
+            this.StatusLabel.Size = new System.Drawing.Size(0, 17);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,6 +211,8 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "RegularExodus 360:  NET Framework Regular Expression Tester ";
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,6 +235,7 @@
         private System.Windows.Forms.TextBox textBoxReplaceText;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buttonReplace;
+        private System.Windows.Forms.ToolStripStatusLabel StatusLabel;
     }
 }
 

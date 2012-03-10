@@ -24,36 +24,53 @@ namespace RegExplore
 
         private void buttonMatch_Click(object sender, EventArgs e)
         {
-            var re = new Regex(textBoxRegEx.Text);
-            var ms = re.Matches(textBoxSample.Text);
-            labelMatchesCount.Text = ms.Count.ToString();
-
-            Properties.Settings.Default.RegEx = textBoxRegEx.Text;
-            Properties.Settings.Default.Sample = textBoxSample.Text;
-            Properties.Settings.Default.Save();
-
-            listBoxMatches.Items.Clear();
-
-            foreach (var m in ms)
+            try
             {
-                listBoxMatches.Items.Add(m.ToString());
+                var re = new Regex(textBoxRegEx.Text);
+                var ms = re.Matches(textBoxSample.Text);
+                labelMatchesCount.Text = ms.Count.ToString();
+
+                Properties.Settings.Default.RegEx = textBoxRegEx.Text;
+                Properties.Settings.Default.Sample = textBoxSample.Text;
+                Properties.Settings.Default.Save();
+
+                listBoxMatches.Items.Clear();
+
+                foreach (var m in ms)
+                {
+                    listBoxMatches.Items.Add(m.ToString());
+                }
+
+                StatusLabel.Text = "Done!";
+            }
+            catch (Exception ex)
+            {
+                StatusLabel.Text = ex.Message;
             }
         }
 
         private void buttonReplace_Click(object sender, EventArgs e)
         {
-            var re = new Regex(textBoxRegEx.Text);
-            var ms = re.Matches(textBoxSample.Text);
-            labelMatchesCount.Text = ms.Count.ToString();
+            try
+            {
+                var re = new Regex(textBoxRegEx.Text);
+                var ms = re.Matches(textBoxSample.Text);
+                labelMatchesCount.Text = ms.Count.ToString();
 
-            Properties.Settings.Default.RegEx = textBoxRegEx.Text;
-            Properties.Settings.Default.Sample = textBoxSample.Text;
-            Properties.Settings.Default.Save();
+                Properties.Settings.Default.RegEx = textBoxRegEx.Text;
+                Properties.Settings.Default.Sample = textBoxSample.Text;
+                Properties.Settings.Default.Save();
 
-            var rep = re.Replace(textBoxSample.Text, textBoxReplaceText.Text);
+                var rep = re.Replace(textBoxSample.Text, textBoxReplaceText.Text);
 
-            listBoxMatches.Items.Clear();
-            listBoxMatches.Items.Add(rep);
+                listBoxMatches.Items.Clear();
+                listBoxMatches.Items.Add(rep);
+                StatusLabel.Text = "Done!";
+            }
+            catch (Exception ex)
+            {
+                StatusLabel.Text = ex.Message;
+            }
         }
 
         Dictionary<string,string> items = new Dictionary<string, string>();

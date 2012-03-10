@@ -2,4 +2,14 @@
 <template>
   <t d="^: Start of a line" ex="^"/>
   <t d="$: End of a line" ex="$"/>
+  <t d="?: Non-Greedy, or zero/one time match" ex="?"/>
+  <t d="+: one or more time match" ex="+"/>
+  <t d="*: Zero or more time match" ex="*"/>
+  <t d="|: OR" ex="|"/>
+  <t d="\w: Alphanumeric word" ex="\w"/>
+  <t d="\W: Non Word" ex="\W"/>
+  <t d="\b: Word Boundary" ex="\b"/>
+  <t d="\d: Digit" ex="\d"/>
+  <t d="\t: Tab" ex="\t"/>
+  <t d="\s: White Space like tab, cr, lf, sp" ex="\s"/>
 </template>
