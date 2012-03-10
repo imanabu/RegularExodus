@@ -36,7 +36,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.label3 = new System.Windows.Forms.Label();
             this.listBoxMatches = new System.Windows.Forms.ListBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelMatchReplace = new System.Windows.Forms.Label();
             this.buttonMatch = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.labelMatchesCount = new System.Windows.Forms.Label();
@@ -120,14 +120,14 @@
             this.listBoxMatches.Size = new System.Drawing.Size(345, 186);
             this.listBoxMatches.TabIndex = 7;
             // 
-            // label4
+            // labelMatchReplace
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 220);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Matches";
+            this.labelMatchReplace.AutoSize = true;
+            this.labelMatchReplace.Location = new System.Drawing.Point(34, 220);
+            this.labelMatchReplace.Name = "labelMatchReplace";
+            this.labelMatchReplace.Size = new System.Drawing.Size(48, 13);
+            this.labelMatchReplace.TabIndex = 8;
+            this.labelMatchReplace.Text = "Matches";
             // 
             // buttonMatch
             // 
@@ -200,7 +200,7 @@
             this.Controls.Add(this.labelMatchesCount);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonMatch);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelMatchReplace);
             this.Controls.Add(this.listBoxMatches);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.statusStrip1);
@@ -228,7 +228,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox listBoxMatches;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelMatchReplace;
         private System.Windows.Forms.Button buttonMatch;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelMatchesCount;

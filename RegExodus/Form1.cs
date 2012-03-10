@@ -42,6 +42,7 @@ namespace RegExplore
                 }
 
                 StatusLabel.Text = "Done!";
+                labelMatchReplace.Text = "Matches";
             }
             catch (Exception ex)
             {
@@ -66,6 +67,7 @@ namespace RegExplore
                 listBoxMatches.Items.Clear();
                 listBoxMatches.Items.Add(rep);
                 StatusLabel.Text = "Done!";
+                labelMatchReplace.Text = "Replacement";
             }
             catch (Exception ex)
             {
